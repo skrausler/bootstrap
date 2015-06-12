@@ -125,7 +125,7 @@ angular.module('ui.bootstrap.dateparser', [])
 
     if ( results && results.length ) {
       var fields, dt;
-      if (baseDate) {
+      if (baseDate instanceof Date && isFinite(baseDate)) {) {
         fields = {
           year: baseDate.getFullYear(),
           month: baseDate.getMonth(),
